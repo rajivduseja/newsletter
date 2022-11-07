@@ -1,0 +1,17 @@
+.common-columns-table-wrapper {
+    background-color: #ecedef;
+    text-align: center;
+    padding: 25px 0;
+  }
+  .common-columns-table-wrapper table {
+    width: 100%;
+    border-spacing: 25px 0;
+  }
+  
+  .common-columns-table-wrapper table td {
+    background-color: white;
+    padding:25px ;
+    vertical-align: top;
+    width: 30%;
+  }
+  
