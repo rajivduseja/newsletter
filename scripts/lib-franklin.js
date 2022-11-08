@@ -292,6 +292,19 @@ export function updateSectionsStatus(main) {
         section.setAttribute('data-section-status', 'loading');
         break;
       } else {
+        if (section.dataset.color) {
+          section.querySelector('.block').parentElement.style.color = `url(${section.dataset.color})`;
+        }
+        if (section.dataset.backgroundImage) {
+          section.querySelector('.block').parentElement.style.backgroundImage = `url(${section.dataset.backgroundImage})`;
+          section.querySelector('.block').parentElement.style.backgroundSize = 'cover';
+        }
+        if (section.dataset.backgroundColor) {
+          section.querySelector('.block').parentElement.style.backgroundColor = section.dataset.backgroundColor;
+        }
+        if (section.dataset.color) {
+          section.querySelector('.block').parentElement.style.color = section.dataset.color;
+        }
         section.setAttribute('data-section-status', 'loaded');
       }
     }

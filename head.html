@@ -68,6 +68,7 @@
     margin-top: 1em;
     margin-bottom: 0.5em;
     scroll-margin: calc(var(--nav-height) + 1em);
+    text-align: center;
   }
 
   h1 {
@@ -277,20 +278,33 @@
     vertical-align: top;
     width: 30%;
   }
+  .header-row.block {
+    padding: 25px;
+  }
+
+  .header-row h1,
+  .header-row h2,
+  .header-row h3,
+  .header-row h4,
+  .header-row h5,
+  .header-row h6 {
+    text-align: left;
+  }
   .quarterly-summary-wrapper {
     background-color: #ecedef;
-    text-align: center;
     padding: 25px 0;
   }
   .common-rows-table-wrapper table {
-    border-spacing:  0 25px;
+    border-spacing: 0 25px;
   }
   .common-rows-table-wrapper table td {
     width: auto;
     min-width: 100px;
     vertical-align: inherit;
   }
-
+  .common-rows-table {
+    padding: 0 50px;
+  }
   @media only screen and (max-width: 690px) {
     html {
       font-size: medium;
