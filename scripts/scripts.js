@@ -1,8 +1,6 @@
 import {
   sampleRUM,
   buildBlock,
-  loadHeader,
-  loadFooter,
   decorateButtons,
   decorateIcons,
   decorateSections,
@@ -95,9 +93,6 @@ async function loadLazy(doc) {
   const element = hash ? main.querySelector(hash) : false;
   if (hash && element) element.scrollIntoView();
 
-  // loadHeader(doc.querySelector('header'));
-  // loadFooter(doc.querySelector('footer'));
-
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   addFavIcon(`${window.hlx.codeBasePath}/styles/favicon.svg`);
   sampleRUM('lazy');
@@ -122,3 +117,8 @@ async function loadPage() {
 }
 
 loadPage();
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach((value) => value.setAttribute('src', value.src));
+  document.querySelectorAll('source').forEach((value) => value.setAttribute('srcset', `${window.location.origin}/${value.srcset}`));
+});
